@@ -19,6 +19,9 @@ function calcular() {
         numeroFios = 0;
     }
 
+    // Fixando o valor revisado para exibir 4 casas decimais
+    valorRevisado = valorRevisado.toFixed(4);
+
     resultadoElement.innerHTML = "Número de Fios: " + numeroFios + ", Valor Revisado: " + valorRevisado;
 
     // Salvar resposta no histórico
