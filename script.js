@@ -44,3 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+function limparHistorico() {
+    // Limpa o histórico do localStorage
+    localStorage.removeItem("historico");
+
+    // Limpa a lista na página
+    var historicoList = document.getElementById("historico");
+    historicoList.innerHTML = "";
+}
