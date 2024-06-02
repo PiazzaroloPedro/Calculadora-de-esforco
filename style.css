@@ -1,25 +1,95 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background-color: #f2f2f2;
+}
+
+nav {
+    background-color: #b22222;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #8b0000;
+    color: #ffdddd;
 }
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+    margin: 40px auto;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    margin-top: 0;
-    color: #333;
-    font-size: 24px;
+    color: #b22222;
+    font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b22222;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #b22222;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #b22222;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8b0000;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #b22222;
+    text-align: center;
+    padding: 10px;
 }
 
 ul {
@@ -40,55 +110,6 @@ li:hover {
     background-color: #f9f9f9;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #666;
-}
-
-input[type="number"],
-select {
-    width: calc(100% - 22px);
-    padding: 12px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-.container.button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.result {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    padding: 10px;
-}
-
 #historico {
     list-style-type: none;
     padding: 0;
@@ -96,19 +117,20 @@ button:hover {
 
 #historico li {
     margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #b22222;
     padding-bottom: 5px;
 }
 
 #historico li:last-child {
     border-bottom: none;
 }
+
 /* Estilizando o link "Ver Histórico" */
 #verHistorico {
     display: block;
     margin: 20px auto;
     /* Centraliza o link */
-    color: #4CAF50;
+    color: #b22222;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
@@ -116,5 +138,5 @@ button:hover {
 }
 
 #verHistorico:hover {
-    color: #45a049;
+    color: #8b0000;
 }

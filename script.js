@@ -1,5 +1,6 @@
 // Função para calcular e salvar no histórico
 function calcular() {
+    var nomeBarra = document.getElementById("nomeBarra").value;
     var esforco = parseFloat(document.getElementById("esforco").value);
     var tipo = document.getElementById("tipo").value;
     var comprimento = parseFloat(document.getElementById("comprimento").value);
@@ -22,11 +23,11 @@ function calcular() {
     // Fixando o valor revisado para exibir 4 casas decimais
     valorRevisado = valorRevisado.toFixed(4);
 
-    resultadoElement.innerHTML = "Número de Fios: " + numeroFios + ", Valor Revisado: " + valorRevisado;
+    resultadoElement.innerHTML = "Nome da Barra: " + nomeBarra + ", Número de Fios: " + numeroFios + ", Valor Revisado: " + valorRevisado;
 
     // Salvar resposta no histórico
     var historico = JSON.parse(localStorage.getItem("historico")) || [];
-    historico.push({ numeroFios: numeroFios, valorRevisado: valorRevisado });
+    historico.push({ nomeBarra: nomeBarra, numeroFios: numeroFios, valorRevisado: valorRevisado });
     localStorage.setItem("historico", JSON.stringify(historico));
 }
 
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         historicoList.innerHTML = "";
         historico.forEach(function (item) {
             var listItem = document.createElement("li");
-            listItem.textContent = "Número de Fios: " + item.numeroFios + ", Valor Revisado: " + item.valorRevisado;
+            listItem.textContent = "Nome da Barra: " + item.nomeBarra + ", Número de Fios: " + item.numeroFios + ", Valor Revisado: " + item.valorRevisado;
             historicoList.appendChild(listItem);
         });
     }
