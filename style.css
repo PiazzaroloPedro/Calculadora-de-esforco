@@ -8,6 +8,7 @@ body {
 nav {
     background-color: #b22222;
     overflow: hidden;
+    padding: 0; /* Remove qualquer padding ao redor do nav */
 }
 
 nav ul {
@@ -20,6 +21,7 @@ nav ul {
 
 nav ul li {
     margin: 0;
+    padding: 0; /* Remove qualquer padding ao redor dos itens da lista */
 }
 
 nav ul li a {
@@ -29,6 +31,8 @@ nav ul li a {
     padding: 14px 20px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
+    margin: 0; /* Remove qualquer margem */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões totais */
 }
 
 nav ul li a:hover {
