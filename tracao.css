@@ -36,6 +36,11 @@ nav ul li a {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.examples img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
 
 h2, h3 {
     color: #333;
